@@ -2,6 +2,7 @@
     --font-family: 'Poppins', sans-serif;
     --font-family-secondary: 'Public Sans', sans-serif;
     --Primary-color-black-green: #143c3c;
+    --Secondary-color-light-green: #e2eddf;
     --Primary-text-color-black: #152427;
     --text-color-black-gray: #575d5e;
     --bg-color-secondary: #2e80ce;
@@ -460,4 +461,44 @@ button {
     bottom: -38px;
     right: 8.12px;
     transform: rotate(-174.659deg);
+}
+
+/* Clients */
+.clients {
+    margin-top: 42px;
+}
+
+.clients-list {
+    justify-content: space-between;
+    padding: 65px 110px;
+    border-radius: 100.5px;
+    background: var(--Secondary-color-light-green);
+}
+
+.client-link {
+    display: flex;
+    padding: 12px;
+}
+
+.client-img {
+    line-height: 0;
+}
+
+/* Custom client link */
+.client-link--google {
+    padding-top: 20px;
+}
+
+.client-link--slack {
+    padding-left: 0;
+}
+
+.client-link--agworld {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 11px;
+}
+
+.client-link--heroku {
+    padding-left: 7px;
 }
