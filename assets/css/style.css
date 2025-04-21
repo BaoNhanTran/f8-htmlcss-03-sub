@@ -55,8 +55,7 @@ button {
     align-items: center;
 }
 
-.section-spacing {
-    margin-top: 30px;
+.padding-y {
     padding: 70px 0;
 }
 
@@ -138,23 +137,43 @@ button {
     font-weight: 800;
 }
 
+.heading--small {
+    font-size: 2.2rem;
+}
+
 .heading--smaller {
     font-size: 1.8rem;
     line-height: 1.67;
 }
 
-.heading--lv3 {
-    font-size: 2.6rem;
-    line-height: 1.38;
+.heading--has-tail::after {
+    position: relative;
+    left: 8px;
+    bottom: 8px;
+    content: '';
+    display: inline-block;
+    width: 66px;
+    height: 2px;
+    background: var(--Primary-text-color-black);
 }
 
-.heading--lv4 {
-    font-size: 1.8rem;
+.label {
+    position: relative;
+    padding-left: 46px;
+    font-weight: 500;
+    line-height: 1.125;
 }
 
-.heading--lv5 {
-    font-size: 1.6rem;
-    line-height: 1.62;
+.label::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    content: '';
+    display: inline-block;
+    width: 25px;
+    height: 1px;
+    background: var(--Primary-text-color-black);
 }
 
 .desc {
@@ -164,18 +183,13 @@ button {
     line-height: 1.56;
 }
 
+.desc--smaller {
+    font-size: 1.4rem;
+    line-height: 1.71;
+}
+
 .desc--light {
     color: #c9d2da;
-}
-
-.desc--lv2 {
-    font-size: 1.6rem;
-    line-height: 1.75;
-}
-
-.desc--lv3 {
-    font-size: 1.4rem;
-    line-height: 1.86;
 }
 
 .heading--light,
@@ -192,26 +206,24 @@ button {
 
 .controls {
     display: flex;
-    gap: 0 18px;
+    gap: 0 17px;
 }
 
 .control-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
-    color: var(--text-color);
-    border: 1px solid currentColor;
-    background: var(--white);
+    color: var(--Primary-text-color-black);
+    background: var(--Secondary-color-light-green);
     cursor: pointer;
 }
 
 .control-btn:hover {
     color: var(--white);
-    border-color: var(--bg-color-secondary);
-    background: var(--bg-color-secondary);
+    background: var(--Primary-color-black-green);
 }
 
 /* Header */
@@ -501,4 +513,74 @@ button {
 
 .client-link--heroku {
     padding-left: 7px;
+}
+
+/* Services */
+.services {
+    margin-top: 36px;
+}
+
+/* Services header */
+.services__header {
+    justify-content: space-between;
+    margin: 12px 0 76px;
+}
+
+.services__heading {
+    width: 520px;
+}
+
+.services__controls {
+    margin-right: 73px;
+}
+
+/* Service item */
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+}
+
+.service-img {
+    position: relative;
+    height: 318px;
+    border-radius: 20px 20px 0px 0px;
+    background-size: auto 100%;
+    transition: background-size 0.3s ease;
+}
+
+.service-item:hover .service-img {
+    background-size: auto 125%;
+}
+
+.service-img__img1 {
+    background-image: url('../img/service-1.png');
+}
+
+.service-img__img2 {
+    background-image: url('../img/service-2.png');
+}
+
+.service-img__img3 {
+    background-image: url('../img/service-3.png');
+}
+
+.service-info {
+    height: 245px;
+    margin-top: -86px;
+    padding: 110px 0 23px;
+    background: var(--white);
+    transition: 0.25s;
+}
+
+.service-info__desc {
+    width: 268px;
+    margin-top: 18px;
+}
+
+.service-item:hover .service-info {
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: -6px 9px 64px -4px rgba(118, 118, 118, 0.25);
+    padding: 110px 18px 23px;
 }
