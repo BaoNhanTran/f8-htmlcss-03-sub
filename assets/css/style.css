@@ -52,6 +52,12 @@ button {
     align-items: center;
 }
 
+.flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .padding-y-70 {
     padding: 70px 0;
 }
@@ -147,6 +153,10 @@ button {
     line-height: 1.67;
 }
 
+.heading--light {
+    color: #e7f9f9;
+}
+
 .heading--has-tail::after {
     position: relative;
     left: 10px;
@@ -155,7 +165,7 @@ button {
     display: inline-block;
     width: 66px;
     height: 2px;
-    background: var(--Primary-text-color-black);
+    background: currentColor;
 }
 
 .label {
@@ -195,11 +205,12 @@ button {
 }
 
 .desc--light {
-    color: #c9d2da;
+    font-family: var(--font-family-secondary);
+    color: #6a8383;
 }
 
-.heading--light,
-.desc--light {
+.desc--link {
+    font-family: var(--font-family-secondary);
     color: var(--white);
 }
 
@@ -385,15 +396,10 @@ button {
     rotate: 45deg;
 }
 
-.hero__play-btn__label {
-    margin: -20px 0;
-}
-
 /* Hero__img-block */
 .hero__media {
     position: relative;
-    margin-right: 28px;
-    margin-left: auto;
+    padding: 0 28px;
 }
 
 .hero__img-block {
@@ -422,7 +428,7 @@ button {
     background-image: url('../img/hero-3.png');
 }
 
-/* hero background */
+/* hero double flowers and circle background */
 .hero-bg__circle-center {
     top: 122px;
     left: 156px;
@@ -463,7 +469,6 @@ button {
 }
 
 .clients-list {
-    justify-content: space-between;
     padding: 65px 110px;
     border-radius: 100.5px;
     background: var(--Secondary-color-light-green);
@@ -504,7 +509,6 @@ button {
 
 /* Services header */
 .services__header {
-    justify-content: space-between;
     margin: 12px 0 76px;
 }
 
@@ -710,10 +714,6 @@ button {
 }
 
 /* Designers card footer */
-.designers-card__footer {
-    justify-content: space-between;
-}
-
 .designers-card__avatar-block {
     display: flex;
 }
@@ -745,7 +745,7 @@ button {
     background-image: url('../img/designer-card-4.png');
 }
 
-/* About us background */
+/* About us flower background */
 .about-us-bg__winding-line {
     top: 21.11px;
     left: 51.23px;
@@ -865,3 +865,118 @@ button {
     background: var(--Secondary-color-light-green);
     filter: blur(2px);
 }
+
+/* ------------- Project ------------- */
+.project {
+    margin-top: 118px;
+    padding: 116px 0 63px;
+    background: var(--Primary-color-black-green);
+}
+
+/* Project header */
+.project__heading {
+    width: 40%;
+}
+
+.project-header__right {
+    width: 590px;
+}
+
+.project-header__right-bottom {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 13px;
+    column-gap: 26px;
+}
+
+.project-header__right-bottom:hover .project__desc {
+    text-decoration: underline;
+}
+
+/* Project video */
+.project-video__wrapper {
+    position: relative;
+    margin-top: 65px;
+    width: 100%;
+    height: 544px;
+    border-radius: 22px;
+}
+
+.project-video {
+    border-radius: 22px;
+}
+
+.project-video:hover + .project__play-btn {
+    visibility: hidden;
+}
+
+.project-video__thumb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    background-image: url('../img/project.jpg');
+}
+
+/* Project play btn */
+.project__play-btn,
+.project__play-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.project__play-btn {
+    cursor: pointer;
+}
+
+.project__play-btn::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    display: block;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.project__play-btn::after {
+    position: absolute;
+    top: -64%;
+    left: -23%;
+    z-index: 1;
+    content: '';
+    width: 36px;
+    height: 36px;
+    background: url('../icons/project-play.svg') no-repeat;
+}
+
+.project__play-btn:checked ~ .project-video__thumb {
+    display: none;
+}
+
+/* Project flower background */
+.project-body {
+    position: relative;
+}
+
+.project-bg__winding-line {
+    top: -161px;
+    right: -31px;
+    transform: rotate(357.985deg);
+}
+
+.project-bg__asterisk {
+    top: -79px;
+    right: -37.72px;
+    transform: rotate(176.985deg);
+}
+
+/* ------------- Features ------------- */
