@@ -101,6 +101,10 @@ button {
     --line-clamp: 3;
 }
 
+.line-clamp.line-5 {
+    --line-clamp: 5;
+}
+
 .absolute {
     position: absolute;
 }
@@ -980,3 +984,53 @@ button {
 }
 
 /* ------------- Features ------------- */
+.features {
+    margin-top: 70px;
+}
+
+.features__heading {
+    width: 520px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features__desc {
+    width: 547px;
+    margin: 20px auto 103px;
+    text-align: center;
+}
+
+/* Feature item */
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 45px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 52.1px 30px;
+    border-radius: 160px;
+    border: 1.5px solid #cecece;
+    transition: 0.3s;
+}
+
+.feature-item:hover {
+    box-shadow: 0px 36px 100px 0px rgba(111, 120, 111, 0.2);
+    border: none;
+    transform: translateY(-59px);
+}
+
+.feature-item__heading {
+    margin: 24px 9px;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.feature-item__desc {
+    width: 286px;
+    text-align: center;
+}
