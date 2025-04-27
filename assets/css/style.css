@@ -780,18 +780,20 @@ button {
 
 /* Process list */
 .process-step {
-    padding: 40px 20px;
+    padding: 46px 41px 21px 20px;
     border-bottom: 2px solid var(--Secondary-color-light-green);
     transition: 0.3s;
 }
 
 .process-step:hover {
+    padding: 30px 41px 37px 30px;
     border-radius: 33px;
     background: var(--Secondary-color-light-green);
 }
 
 .process-step:hover .process__desc--learn-more {
-    display: inline-block;
+    visibility: visible;
+    opacity: 1;
 }
 
 .process-step:hover .process__desc {
@@ -800,6 +802,8 @@ button {
 
 .process-step:hover .process-step__img {
     visibility: visible;
+    transform: scale(1);
+    opacity: 1;
 }
 
 .process-step__num {
@@ -816,7 +820,10 @@ button {
 }
 
 .process__desc--learn-more {
-    display: none;
+    display: inline-block;
+    margin-top: 22px;
+    visibility: hidden;
+    opacity: 0;
     margin-top: 22px;
     position: relative;
     font-weight: 400;
@@ -856,7 +863,11 @@ button {
     background-image: url('../img/process.png');
     background-position: -289.145px -71.727px;
     background-size: 184.868% 125.182%;
-    transition: visibility 0hidden3s;
+    transition: 0.8s;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: 0% 100%;
 }
 
 .process-step__img::after {
@@ -881,6 +892,10 @@ button {
 /* Project header */
 .project__heading {
     width: 40%;
+}
+
+.project__heading.heading--has-tail::after {
+    color: var(--Tertiary-color-light-green);
 }
 
 .project-header__right {
@@ -1078,7 +1093,7 @@ button {
 }
 
 .blog-item:hover .blog-item__info-bottom {
-    margin: 0;
+    margin-right: 3px;
 }
 
 .blog-item__img {
@@ -1246,6 +1261,7 @@ button {
 
 .column-right__link:hover {
     text-decoration: underline;
+    color: var(--white);
 }
 
 .footer__separate {
