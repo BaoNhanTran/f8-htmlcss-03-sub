@@ -5,7 +5,8 @@
     --Secondary-color-light-green: #e2eddf;
     --Tertiary-color-light-green: #83a17d;
     --Primary-text-color-black: #152427;
-    --text-color-black-gray: #575d5e;
+    --Secondary-text-color-black-gray: #575d5e;
+    --Tertiary-text-color-gray: #6a8383;
     --white: #fff;
 }
 
@@ -23,7 +24,7 @@ body {
     font-size: 1.6rem;
     line-height: 1.5;
     font-weight: 400;
-    color: var(--text-color-black-gray);
+    color: var(--Secondary-text-color-black-gray);
 }
 
 * {
@@ -192,7 +193,7 @@ button {
 }
 
 .desc {
-    color: var(--text-color-black-gray);
+    color: var(--Secondary-text-color-black-gray);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.56;
@@ -210,7 +211,7 @@ button {
 
 .desc--light {
     font-family: var(--font-family-secondary);
-    color: #6a8383;
+    color: var(--Tertiary-text-color-gray);
 }
 
 .desc--link {
@@ -289,7 +290,7 @@ button {
 
 .nav__link {
     position: relative;
-    color: var(--text-color-black-gray);
+    color: var(--Secondary-text-color-black-gray);
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 1.56;
@@ -660,7 +661,7 @@ button {
 
 .designers-card__title--sub {
     margin: 6px 0 10px;
-    color: var(--text-color-black-gray);
+    color: var(--Secondary-text-color-black-gray);
     opacity: 0.4;
 }
 
@@ -1134,10 +1135,128 @@ button {
 .blog-item__info-bottom {
     margin-right: 22px;
     padding: 16px 0 12px;
-    color: var(--text-color-black-gray);
+    color: var(--Secondary-text-color-black-gray);
     text-align: right;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.2;
     border-top: 1px solid #c4c4c4;
+}
+
+/* ------------- footer ------------- */
+.footer {
+    margin-top: 32px;
+    padding: 72px 0 25px;
+    background: var(--Primary-color-black-green);
+}
+
+.footer-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__title {
+    color: var(--white);
+    font-size: 3.2rem;
+    font-weight: 500;
+}
+
+.footer__form {
+    width: 354px;
+    border-bottom: 1px solid var(--Tertiary-text-color-gray);
+}
+
+.footer__email {
+    display: inline-block;
+    margin: 5px 0 16px;
+    padding: 20px 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--white);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.footer__email::placeholder {
+    color: var(--Tertiary-text-color-gray);
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.footer__submit {
+    cursor: pointer;
+    padding: 13px;
+}
+
+/* Footer socials */
+.footer__socials {
+    margin-top: 47px;
+    display: flex;
+    column-gap: 22px;
+}
+
+.footer__social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #265252;
+    color: #fbfbfb;
+}
+
+.footer__social:hover {
+    border-color: transparent;
+    background: #a75325;
+    color: #fcfcfc;
+}
+
+/* Footer column right */
+.footer-right {
+    display: flex;
+    column-gap: 50px;
+    padding: 22px 19px 0 0;
+}
+
+.column-right__heading {
+    color: var(--white);
+    font-family: var(--font-family-secondary);
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.56;
+    margin-bottom: 6px;
+}
+
+.column-right__link,
+.footer__copyright {
+    display: block;
+    color: var(--Tertiary-text-color-gray);
+    font-family: var(--font-family-secondary);
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 2.25;
+}
+
+.column-right__link:hover {
+    text-decoration: underline;
+}
+
+.footer__separate {
+    position: absolute;
+    bottom: -45px;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, #143c3c 2.28%, #295a5a 55.65%, rgba(38, 82, 82, 0) 102.06%);
+}
+
+.footer__copyright {
+    margin-top: 70px;
+    text-align: center;
 }
